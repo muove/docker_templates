@@ -1,0 +1,11 @@
+version: '2'
+services:
+  redis:
+    image: 'redis'
+    restart: always
+    mem_limit: '1024M'
+    command: redis-server --requirepass jka7Mz5mYrzpZ9mWN2fKQjXksQ2bzyDj --appendonly yes
+    volumes:
+      - ./redis_data:/data
+    ports:
+      - '6379:6379'
