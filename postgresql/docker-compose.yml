@@ -1,0 +1,14 @@
+version: "3"
+services:
+#  Create a service named db.
+  postgres:
+    image: "postgres"
+    container_name: "postgres"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=w8V3KH4cD6kc58LAdrPZuNFPDvQMM923
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
